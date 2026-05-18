@@ -1,0 +1,50 @@
+MOSFET NOTES APPLICATION TO HEATER CONTROLLER 
+
+- MUST be driven by low impedence source capable of sourcing and sinking current. does that mean it should be able to sink eqv charge by the mcu? 
+- switching speeds are mostly high for all mosfets depended on carriers travel across band gap
+- ON constant current not needed. just enough to charge the capacitors. 
+- interested current conduction electrode (gate?) is isolated from the conducting path? yet because of the discharge resistor gate is not truly isolated. put optocoupler in between to achieve galvanic isolation. 
+
+
+ISOLATION OF MCU AND HEATER 
+- NO GALVANIC ISOLATION IS NEEDED. IT IS ONLY REQUIRE TO KEEP IT ELECTRICALLY ISOLATED
+-For this the return current from the heater 10A should not flow through the mcu ground -for this we keep the mcu
+-ground relatively higher resistance meaning short traces and the heater ground thicker
+
+Exploring STAR ground technique to achieve electrical isolation of the ground:
+-not applicable as it deals with providing a common ground point at same potential to various modules being connected to a common ground. 
+
+Addressing the noise occurring due to switching 10A of current in the PCB:
+- 
+
+
+Addressing the thermal conductivity of the PCB traces and providing adequate dimensions for optimum performance: 
+- Strategically place Thermal vias 
+- consider inner planes just for heat transfer 
+- consider gold plated pads instead of HASL for better connectivity and heat resistance
+- consider focusing on junction temperature of each active component
+- Consider location of heat source
+- Consider creating a gradient to allow for natural heat flow from hot to cold
+- Thermal resistance of PCB is determined by the material properties of the substrate and arrangement of copper elements in the board
+- Keep high current traces short, wide for least thermal resistance and least voltage drop 
+- consider measuring pcb thermal conductivity by guarded hot plate method; measuring temp of hot and cold surface of the pcb 
+- Can also consider 3-omega measurement but a bit more involved
+- Layer stackup can play a role in it. 
+- Thermal resistance measurements can be carried out once the PCB is ordered as a prototype to improve in the next iteration 
+
+
+power, inrush calculations and reasonings behind it. 
+
+at 10Khz what would be the the saturation on the mosfet at 3.3V?
+What would be the Rds(on) at that point? 
+What is the inrush current of the heater material
+What is the power dessipawted at that point
+
+I(inrush current ) = Vmax / cold resistance = 4.2 / 0.199 ohm = 21A 
+
+power drawn P = (Inrush current)^2 * (rdson + shunt resistor + material_resistance) = 21^2 * (0.199 + 0.004 + 0.004) = 1.65
+
+Avoiding thermal runaway:
+usually seen in applications powered by constant current source whereas the battery is a constant voltage source, as the temperature rises the resistance rises, as resistance rises Temperature of the trace rises, because current is constant more heat is generated which further increases the resistance and hence a condition is reached where the traces burn or explode: a thermal runaway
+
+finding out if mosfet can handle the peak current P = Vds * Id = 4.2 * 21 = 88 W?

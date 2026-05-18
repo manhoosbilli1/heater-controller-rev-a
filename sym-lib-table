@@ -1,0 +1,6 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "mosfet_ti")(type "KiCad")(uri "${KIPRJMOD}/lib/lib_sym/mosfet_ti.kicad_sym")(options "")(descr ""))
+  (lib (name "load_switch")(type "KiCad")(uri "${KIPRJMOD}/lib/lib_sym/load_switch.kicad_sym")(options "")(descr ""))
+  (lib (name "tps73001sf6")(type "KiCad")(uri "${KIPRJMOD}/lib/tps73001sf6.kicad_sym")(options "")(descr ""))
+)

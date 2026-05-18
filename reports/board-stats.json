@@ -1,0 +1,104 @@
+{
+  "metadata": {
+    "date": "2026-05-18T04:12:00",
+    "generator": "KiCad 10.0.1",
+    "project": "HEATER CONTROLLER REV_A",
+    "board_name": "HEATER CONTROLLER REV_A"
+  },
+  "board": {
+    "has_outline": true,
+    "width": "47.2400 mm",
+    "height": "45.8244 mm",
+    "area": "2164.745 mm²",
+    "front_component_density": "40.86",
+    "back_component_density": "6.43",
+    "front_copper_area": "1440.246 mm²",
+    "back_copper_area": "1734.501 mm²",
+    "min_track_clearance": "0.2000 mm",
+    "min_track_width": "0.2000 mm",
+    "min_drill_diameter": "0.2500 mm",
+    "board_thickness": "1.6600 mm",
+    "front_footprint_area": "884.409 mm²",
+    "back_footprint_area": "139.238 mm²",
+    "front_footprint_density": "40.86",
+    "back_footprint_density": "6.43"
+  },
+  "pads": {
+    "through_hole": 23,
+    "smd": 192,
+    "connector": 0,
+    "npth": 3,
+    "castellated": 0,
+    "press_fit": 0
+  },
+  "vias": {
+    "through": 255,
+    "blind": 0,
+    "buried": 0,
+    "micro": 0
+  },
+  "components": {
+    "tht": {
+      "front": 4,
+      "back": 0,
+      "total": 4
+    },
+    "smd": {
+      "front": 50,
+      "back": 0,
+      "total": 50
+    },
+    "unspecified": {
+      "front": 19,
+      "back": 2,
+      "total": 21
+    },
+    "total": {
+      "front": 73,
+      "back": 2,
+      "total": 75
+    }
+  },
+  "drill_holes": [
+    {
+      "count": 255,
+      "shape": "Round",
+      "x_size": "0.2500 mm",
+      "y_size": "0.2500 mm",
+      "plated": true,
+      "source": "Via",
+      "start_layer": "L1 (Sig, PWR)",
+      "stop_layer": "L6 (Sig, PWR)"
+    },
+    {
+      "count": 17,
+      "shape": "Round",
+      "x_size": "1.0000 mm",
+      "y_size": "1.0000 mm",
+      "plated": true,
+      "source": "Pad",
+      "start_layer": "L1 (Sig, PWR)",
+      "stop_layer": "L6 (Sig, PWR)"
+    },
+    {
+      "count": 6,
+      "shape": "Round",
+      "x_size": "0.3000 mm",
+      "y_size": "0.3000 mm",
+      "plated": true,
+      "source": "Pad",
+      "start_layer": "L1 (Sig, PWR)",
+      "stop_layer": "L6 (Sig, PWR)"
+    },
+    {
+      "count": 3,
+      "shape": "Round",
+      "x_size": "3.0000 mm",
+      "y_size": "3.0000 mm",
+      "plated": false,
+      "source": "Pad",
+      "start_layer": "L1 (Sig, PWR)",
+      "stop_layer": "L6 (Sig, PWR)"
+    }
+  ]
+}

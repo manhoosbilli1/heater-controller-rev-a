@@ -1,0 +1,8 @@
+- Undervoltage protection carried out by mcu:
+in order to successfully do this it is imperative to know how an UV system works. the battery bus voltage is constantly monitored by wasting very minute current often in uA. This part is often only connected to the battery and isolated from the rest of the circuit so that even when the circuit is turned off this part always monitors the voltage successfully. In order to replace mcu instead of the dedicated circuit it's crucial to configure the mcu such that it is isolated from the rest of the circuit in the same manner. It is also important to measure the voltage and feed it to the mcu. there are various ways, simplest of which is a voltage reference or a voltage divider. but the problem with those solutions in this pcb is the fact that the reference voltage which is the battery changes, the mcu works at a range and so does the heater. so we can't use constant voltage method. 
+
+- constant power is important for that current and voltage reading must be read at the load. 
+- combining uv detection and load measurement was challenging but i have managed to get this done with a single mosfet. simply turn off all the IO's through the mcu 
+- And turn off the load as well as ldo, that will cutoff all the circuit from the battery except the ldo (uA), mosfet(1uA) and mcu(100uA in low power state) this is a bit more than traditional dedicated circuit but this current is dependent on the mcu. 
+
+
